@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+        <label>firstname</label>
+        <input type ="name" name = "firstname" placeholder="enter your first name">
+        <label>lastname</label> &nbsp &nbsp &nbsp;
+        <input type ="name" name = "lastname" placeholder="enter your last name">
+        <input type="submit" value=""submit" >
+        <input type="reset" value="Reset this ">
+        
+        <br></br>
+        <p>what is your gender</p>
+        <input type ="radio" name = "gender" value="male">
+        <label>male</label>
+        <br></br>
+        <input type ="radio" name = "gender" value="male">
+        <label>male</label>
+
+        <br></br>
+        <p>what is your hobbies</p>
+        <input type ="checkbox" name ="hobbies1" values ="reading">
+        <label>reading</label>
+        <input type ="checkbox" name ="hobbies2" values ="reading">
+        <label>writing</label>
+        <input type ="checkbox" name ="hobbies3" values ="reading">
+        <label>singing</label>
+        <br></br>
+        <input type="button" name="submit" value="submit" onclick="alert(taskdone)">
+        <br></br>
+        <input type="color" name="bgcolor" value="hfg" >
+        <br></br>
+        <input type="date" name="dob" >
+        <br></br>
+        <input type="email" name="email" >
+        <br></br>
+        <input type="file" name="file" accept=".pdf , .jpg">
+        <br></br>
+        <input type="number" name="age" min="18" max="60">
+        <br></br>
+        <input type="password" name="password" minlength="8">
+        <br></br>
+        <input type="range" name="range" min="0" max="100">
+        <br></br>
+        <input type="search" name="search" >
+        <br></br>
+        <input type="tel" name="tel" maxlength="10" minlength="2" >
+        <br></br>
+        <input type="text" name="text" pattern="[a-zA-Z]{3,10}" title="3 to 10 characters only">
+        <br></br>
+        <input type="time" name="time" value="12:00:00" >
+        <br></br>
+        <input type="url" name="url" pattern="https://www.example.com/" title="must start with https://www.example.com/">
+        <br></br>
+        <textarea name="textarea" rows="4" cols="50" maxlength="200"></textarea>
+        <br></br>
+        <input type="submit" value="Submit">
+        <br></br>
+        <input type="reset" value="Reset">
+        <br></br>
+        <script>
+            function taskdone(){
+                alert("Form submitted successfully");
+            }
+        </script>
+        <script>
+            document.querySelector('input[type="radio"]').addEventListener('change', function() {
+                if (this.value =='male') {
+                    document.body.style.backgroundColor ='skyblue';
+                } else {
+                    document.body.style.backgroundColor = 'white';
+                }
+            });
+        </script>
+        <script>
+            document.querySelector('input[type="checkbox"]').addEventListener('change', function() {
+                var hobbies = document.querySelectorAll('input[type="checkbox"]:checked');
+                var selectedHobbies = [];
+                hobbies.forEach(function(item) {
+                    selectedHobbies.push(item.value);
+                });
+                alert('Selected hobbies:'+ selectedHobbies.join(', '));
+            });
+        </script>
+        <script>
+            document.querySelector('input[type="color"]').addEventListener('change', function() {
+                document.body.style.backgroundColor = this.value;
+            });
+        </script>
+        <script>
+            document.querySelector('input[type="date"]').addEventListener('change', function() {
+                alert('Selected date:'+ this.value);
+            });
+        </script>
+        <script>
+            document.querySelector('input[type="email"]').addEventListener('input', function() {
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(this.value)) {
+                    alert('Invalid email address');
+                }
+            });
+        </script>
+        <script>
+            document.querySelector('input[type="file"]').addEventListener('change', function() {
+                var file = this.files[0];
+                alert('Selected file:'+ file.name);
+            });
+        </script>
+        
+    </form>
+    
+</body>
+</html>
