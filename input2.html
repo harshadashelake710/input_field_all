@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <fieldset>
+       <legend>
+         <h2>Form Validation</h2>
+         <p>This form includes fields for name, email, and password. The name field must contain only alphabetic characters, the email field must be in a valid email format, and the password field must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.</p>
+         <p>Please note that the form will not be submitted until all fields are filled correctly.</p>
+         <form action="/submit_form" method="get" target="_blank">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z]+" title="Only alphabetic characters are allowed.">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number.">
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <input type="reset" value="Reset">
+            <br><br>
+            <input type="button" value="Change Background Color" onclick="changeBackgroundColor()">
+            <br><br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="reading">
+            <label for="hobby1">Reading</label>
+            <br><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="writing">
+            <label for="hobby2">Writing</label>
+            <br><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="singing">
+            <label for="hobby3">Singing</label>
+            <br><br>
+            <input type="radio" id="gender1" name="gender" value="male">
+            <label for="gender1">Male</label>
+            <input type="radio" id="gender2" name="gender" value="female">
+            <label for="gender2">Female</label>
+            <br><br>
+            <input type="file" id="file" name="file">
+            <br><br>
+            <input type="range" id="range" name="range" min="0" max="100">
+            <br><br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <input type="reset" value="Reset">
+            <br><br>
+            <input type="button" value="Change Background Color" onclick="changeBackgroundColor()">
+            <br><br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="reading">
+            <label for="hobby1">Reading</label>
+            <br><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="writing">
+            <label for="hobby2">Writing</label>
+            <br><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="singing">
+            <label for="hobby3">Singing</label>
+            <br><br>
+            <input type="radio" id="gender1" name="gender" value="male">
+            <label for="gender1">Male</label>
+            <input type="radio" id="gender2" name="gender" value="female">
+            <label for="gender2">Female</label>
+            <br><br>
+            <input type="file" id="file" name="file">
+            <br><br>
+            <input type="range" id="range" name="range" min="0" max="100">
+            <br><br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <input type="reset" value="Reset">
+            <br><br>
+            <input type="button" value="Change Background Color" onclick="changeBackgroundColor()">
+            <br><br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="reading">
+            <label for="hobby1">Reading</label>
+            <br><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="writing">
+            <label for="hobby2">Writing</label>
+            <br><br>
+
+            <input type="checkbox" id="hobby3" name="hobby3" value="singing">
+            <label for="hobby3">Singing</label>
+            <br><br>
+            <input type="radio" id="gender1" name="gender" value="male">
+            <label for="gender1">Male</label>
+            <input type="radio" id="gender2" name="gender" value="female">
+            <label for="gender2">Female</label>
+            <br><br>
+            <input type="file" id="file" name="file">
+            <br><br>
+
+            <input type="range" id="range" name="range" min="0" max="100">
+            <br><br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <input type="reset" value="Reset">
+            <br><br>
+            <input type="button" value="Change Background Color" onclick="changeBackgroundColor()">
+            <br><br>
+            <input type="checkbox" id="hobby1" name="hobby1" value="reading">
+            <label for="hobby1">Reading</label>
+            <br><br>
+            <input type="checkbox" id="hobby2" name="hobby2" value="writing">
+            <label for="hobby2">Writing</label>
+            <br><br>
+            <input type="checkbox" id="hobby3" name="hobby3" value="singing">
+            <label for="hobby3">Singing</label>
+            <br><br>
+            <input type="radio" id="gender1" name="gender" value="male">
+            <label for="gender1">Male</label>
+            <input type="radio" id="gender2" name="gender" value="female">
+            <label for="gender2">Female</label>
+            <br><br>
+            <input type="file" id="file" name="file">
+            <br><br>
+            <input type="range" id="range" name="range" min="0" max="100">
+            <br><br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <input type="reset" value="Reset">
+            <br><br>
+
+
+
+
+         </form>
+       </legend>
+      </fieldset>
+</body>
+</html>
